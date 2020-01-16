@@ -21,7 +21,7 @@
  <br>
  <button id="send" class="btn btn-success">Send</button>
  </div>
- <div id="messages">
+ <div id="messages" style="display: inline;">
  
 </div>
 </div>
@@ -38,9 +38,9 @@
     })
     
 function addMessages(message){
-   $("#messages").append(`
-      <h4> ${message.name} </h4>
-      <p>  ${message.message} </p>`)
+   $("#messages").prepend(`
+      <p><b>${message.name} scrive: </b>  ${message.message} </p>
+      `)
    }
    
 function getMessages(){
